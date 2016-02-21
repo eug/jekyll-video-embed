@@ -3,10 +3,10 @@ class VideoEmbed < Liquid::Tag
   Syntax = /^\s*([^\s]+)(\s+(\d+)\s+(\d+)\s*)?/
 
   Hosts = {
-    "ted" => lambda { |id| "https://embed-ssl.ted.com/talks/#{id}.html" },
-    "ustream" => lambda { |id| "http://www.ustream.tv/embed/#{id}?html5ui" },
-    "vimeo" => lambda { |id| "https://player.vimeo.com/video/#{id}" },
-    "youtube" => lambda { |id| "http://www.youtube.com/embed/#{id}?color=white&theme=light" }
+    "ted"     => ->(id) { "https://embed-ssl.ted.com/talks/#{id}.html" },
+    "ustream" => ->(id) { "http://ustream.tv/embed/#{id}" },
+    "vimeo"   => ->(id) { "https://player.vimeo.com/video/#{id}" },
+    "youtube" => ->(id) { "http://youtube.com/embed/#{id}" }
   }
 
   def initialize(tag_name, markup, tokens)
@@ -32,6 +32,6 @@ class VideoEmbed < Liquid::Tag
     "<iframe width=\"#{@width}\" height=\"#{@height}\" src=\"#{@host.call(@id)}\" frameborder=\"0\" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>"
   end
   
-  Hosts.each_key {|key| Liquid::Template.register_tag key, self}
+  Hosts.each_key { |key| Liquid::Template.register_tag key, self }
 
 end
