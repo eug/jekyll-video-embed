@@ -1,6 +1,6 @@
 # jekyll-video-embed
 
-It provides several tags which generates a HTML snippet to embed videos. This plugin was heavly based on [@joelverhagen](https://gist.github.com/joelverhagen/1805814) implementation.
+It provides several tags which generates a HTML snippet to embed videos, and can easily support others video websites. This plugin was heavily based on [@joelverhagen](https://gist.github.com/joelverhagen/1805814) implementation.
 
 ## Installation
 Place the file in the `_plugins` directory.
