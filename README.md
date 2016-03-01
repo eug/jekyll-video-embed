@@ -1,32 +1,19 @@
 # jekyll-video-embed
 
-It provides provides several tags that generates a HTML snippet to embed videos.
+It provides provides several tags that generates a HTML snippet to embed videos. This plugin was heavly based on [@joelverhagen](https://gist.github.com/joelverhagen/1805814) implementation.
 
 ## Installation
-Just place the file in the `_plugins` directory
+Place the file in the `_plugins` directory.
 
 ## Usage
+To include a video in your jekyll post, just use the string `{% tag video_id width height %}` and replace by its respective `tag` and `video_id`, the `width` (default value: 640) and `height`(default value: 360) are optional.
 
-`{% tag video_id width height %}`
+## Description
+The following table shows the supported websites, their respective tag, and where is located the `video_id` (highlighted) in the URL of each video.
 
-## Video ID
-In order to extract the video id, the following table exemplify by highlighting the *id* string.
-
-|    Website  |  Video ID                                                   |
-|-------------|-------------------------------------------------------------|
-| ted.com     | ted.com/talks/**ken_robinson_says_schools_kill_creativity** |
-| ustream.tv  | ustream.tv/channel/**6540154**                              |
-| vimeo.com   | vimeo.com/**22439234**                                      |
-| youtube.com | youtube.com/watch?v=**9bZkp7q19f0**                         |
-
-## Support
-The current verion supports the following video websites:
-
-|    Website  |   Tag   |
-|-------------|---------|
-| ted.com     | ted     |
-| ustream.tv  | ustream |
-| vimeo.com   | vimeo   |
-| youtube.com | youtube |
-
-
+|    Website  |   Tag   |  Video ID                                                   |
+|-------------|---------|-------------------------------------------------------------|
+| ted.com     | ted     | ted.com/talks/**ken_robinson_says_schools_kill_creativity** |
+| ustream.tv  | ustream | ustream.tv/channel/**6540154**                              |
+| vimeo.com   | vimeo   | vimeo.com/**22439234**                                      |
+| youtube.com | youtube | youtube.com/watch?v=**9bZkp7q19f0**                         |
