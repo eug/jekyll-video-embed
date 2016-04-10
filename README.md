@@ -9,7 +9,7 @@ Place the file in the `_plugins` directory.
 To include a video in your jekyll post, just use the string `{% tag video_id width height %}` and replace by its respective `tag` and `video_id`, the `width` (default value: 640) and `height`(default value: 360) are optional.
 
 ## Description
-The following table shows the supported websites, their respective tag, and where is located the `video_id` (highlighted) in the URL of each video.
+The following table shows the supported websites, their respective `tag`, and where is located the `video_id` (highlighted) in the URL of each video.
 
 |    Website  |   Tag   |  Video ID                                                   |
 |-------------|---------|-------------------------------------------------------------|
