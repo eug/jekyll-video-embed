@@ -6,9 +6,9 @@ module Jekyll
 
     Hosts = {
       "ted"     => ->(id) { "https://embed-ssl.ted.com/talks/#{id}.html" },
-      "ustream" => ->(id) { "http://ustream.tv/embed/#{id}" },
+      "ustream" => ->(id) { "https://ustream.tv/embed/#{id}" },
       "vimeo"   => ->(id) { "https://player.vimeo.com/video/#{id}" },
-      "youtube" => ->(id) { "http://youtube.com/embed/#{id}" }
+      "youtube" => ->(id) { "https://youtube.com/embed/#{id}" }
     }
 
     def initialize(tag_name, markup, tokens)
